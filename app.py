@@ -1,3 +1,4 @@
-import streamlit as st
+from main import *
 
-st.title("Fraud Detection")
+if __name__ == '__main__':
+    main()
