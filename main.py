@@ -11,6 +11,16 @@ from model import *
 def main():
     st.title("Sistem Deteksi Transaksi Keuangan Mencurigakan")
     st.subheader("1. Data")
+    with st.expander("Petunjuk Penggunaan") :
+        st.write("1. Menggunakan File CSV/Excel"
+                 "\n\n\t a. Pilih Sumber Data: Pastikan untuk memilih opsi file CSV atau Excel sebagai sumber data Anda."
+                 "\n\n\t b. Unggah File: Masukkan file CSV atau Excel Anda ke dalam kolom yang tersedia."
+                 "\n\n\t c. Mulai Training SOM: Centang checkbox “Train SOM”."
+                 "\n\n\t d. Tunggu Proses: Tunggu hingga proses training selesai. \n\n"
+                 "2. Menggunakan Database"
+                 "\n\n\t a. Pilih opsi database sebagai sumber data Anda."
+                 "\n\n\t b. Mulai Training SOM: Centang checkbox “Train SOM”."
+                 "\n\n\t c. Tunggu Proses: Tunggu hingga proses training selesai.")
     data_source = st.radio("Pilih sumber data", ("CSV/Excel File", "Database"))
     upload_file = None
     transaction_data = None
